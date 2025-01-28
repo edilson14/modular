@@ -8,13 +8,13 @@ class ModuleServiceImpl extends ModuleService {
   ModuleServiceImpl(this.tracker);
 
   @override
-  Result<Unit, ModularError> finish() {
+  Result<Unit> finish() {
     tracker.finishApp();
     return const Success(unit);
   }
 
   @override
-  Result<Unit, ModularError> start(Module module) {
+  Result<Unit> start(Module module) {
     tracker.runApp(module);
     return const Success(unit);
   }

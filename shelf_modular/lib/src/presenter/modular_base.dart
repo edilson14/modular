@@ -182,7 +182,7 @@ class ModularBase implements IModularBase {
     })(request);
   }
 
-  FutureOr<Response> _routeError(ModularError error) {
+  FutureOr<Response> _routeError(Exception error) {
     if (error is RouteNotFoundException) {
       return Response.notFound(error.message);
     }

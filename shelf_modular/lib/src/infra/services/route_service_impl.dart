@@ -10,7 +10,7 @@ class RouteServiceImpl implements RouteService {
   RouteServiceImpl(this.tracker);
 
   @override
-  AsyncResult<ModularRoute, ModularError> getRoute(RouteParmsDTO params) async {
+  AsyncResult<ModularRoute> getRoute(RouteParmsDTO params) async {
     final route = await tracker.findRoute(
       params.url,
       data: params.arguments,
@@ -24,12 +24,12 @@ class RouteServiceImpl implements RouteService {
   }
 
   @override
-  Result<ModularArguments, ModularError> getArguments() {
+  Result<ModularArguments> getArguments() {
     return Success(tracker.arguments);
   }
 
   @override
-  Result<Unit, ModularError> reportPush(ModularRoute route) {
+  Result<Unit> reportPush(ModularRoute route) {
     tracker.reportPushRoute(route);
     return const Success(unit);
   }
