@@ -21,14 +21,14 @@ environment:
   sdk: ">=2.18.0 <3.0.0"
 
 dependencies:
-  dartz: ^0.10.0-nullsafety.2
-  flutter_mobx: ^2.0.1
-  flutter_triple: ^2.1.4
-  http: ^1.1.0
-  flutter_modular: 
+  dartz: ^0.10.1
+  flutter_mobx: ^2.3.0
+  flutter_triple: ^3.0.0
+  http: ^1.3.0
+  flutter_modular:
     path: ../
-  alice: ^0.3.3
-  bloc: ^8.0.3
+  alice: ^0.4.2
+  bloc: ^9.0.0
   flutter:
     sdk: flutter
 
@@ -36,11 +36,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
 
 dev_dependencies:
-  flutter_lints: ^2.0.2
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  mocktail: ^0.3.0
-
+  mocktail: ^1.0.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
